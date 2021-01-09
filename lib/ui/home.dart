@@ -86,7 +86,7 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             SizedBox(
-              width: 10,
+              width: 25,
             ),
             Icon(
               icon,

@@ -14,18 +14,35 @@ class _LoginGuruState extends State<LoginGuru> with Validation {
   Color _sec = Color(0xff457b9d);
   Color _tr = Color(0xfff1faee);
 
-  TextEditingController _emailController = TextEditingController();
-  TextEditingController _passController = TextEditingController();
+  final _emailController = TextEditingController();
+  final _passController = TextEditingController();
 
   // clearField() {
   //   _emailController.clear();
   //   _passController.clear();
   // }
 
-  String _email = '';
-  String _pass = '';
+  String _email;
+  String _pass;
 
   final _formKey = GlobalKey<FormState>();
+
+  @override
+  void initState() {
+    super.initState();
+    _email = '';
+    _pass = '';
+
+    //_formKey.currentState.reset();
+  }
+
+  clearField() {
+    setState(() {
+      _emailController.clear();
+      _passController.clear();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     Size screen = MediaQuery.of(context).size;
@@ -89,6 +106,7 @@ class _LoginGuruState extends State<LoginGuru> with Validation {
                               validator: emailValidation,
                               onSaved: (value) {
                                 _email = value;
+                                value = '';
                               },
                               style: TextStyle(color: _tr),
                               decoration: InputDecoration(
@@ -115,10 +133,13 @@ class _LoginGuruState extends State<LoginGuru> with Validation {
                                     BorderRadius.all(Radius.circular(15))),
                             width: screen.width * 0.7,
                             child: TextFormField(
+                              enableSuggestions: false,
+                              obscureText: true,
                               controller: _passController,
                               validator: passValidation,
                               onSaved: (value) {
                                 _pass = value;
+                                value = '';
                               },
                               style: TextStyle(color: _tr),
                               decoration: InputDecoration(
@@ -144,7 +165,8 @@ class _LoginGuruState extends State<LoginGuru> with Validation {
                           GestureDetector(
                             onTap: () {
                               if (_formKey.currentState.validate()) {
-                                _formKey.currentState.save();
+                                //_formKey.currentState.reset();
+                                clearField();
 
                                 Navigator.push(
                                     context,
