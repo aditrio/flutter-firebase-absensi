@@ -1,4 +1,6 @@
 import 'package:eabsensi_firebase/ui/guru-login.dart';
+import 'package:eabsensi_firebase/ui/siswa-login.dart';
+import 'package:eabsensi_firebase/ui/siswa.dart';
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
@@ -53,7 +55,13 @@ class _HomePageState extends State<HomePage> {
                             ));
                       },
                       child: _buttonBanner("Guru", Icons.person_pin)),
-                  _buttonBanner("Siswa", Icons.people_alt),
+                  GestureDetector(
+                      onTap: () => Navigator.push(
+                          context,
+                          PageTransition(
+                              child: LoginSiswa(),
+                              type: PageTransitionType.fade)),
+                      child: _buttonBanner("Siswa", Icons.people_alt)),
                   Center(
                     child: Text(
                       "e-absensi v.0.1 ",

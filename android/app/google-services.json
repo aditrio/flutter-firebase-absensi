@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "669937948315",
+    "project_id": "flutterbase-sbd",
+    "storage_bucket": "flutterbase-sbd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:669937948315:android:eedf69e381165e1080183e",
+        "android_client_info": {
+          "package_name": "com.example.eabsensi_firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "669937948315-50m5f3q945v20jjgmb97lsqearccoplt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.eabsensi_firebase",
+            "certificate_hash": "95542ef4709c547f5dbd3544568eb7c34e220995"
+          }
+        },
+        {
+          "client_id": "669937948315-mrj6lp0pgurpaq7aunav8utihbfjd00h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCADWN8Cs8AExen7Mku9A0V724LP4epTq4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "669937948315-mrj6lp0pgurpaq7aunav8utihbfjd00h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,22 +1,22 @@
-import 'package:eabsensi_firebase/ui/guru.dart';
+import 'package:eabsensi_firebase/ui/siswa.dart';
 import 'package:eabsensi_firebase/ui/validation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 
-class LoginGuru extends StatefulWidget {
+class LoginSiswa extends StatefulWidget {
   @override
-  _LoginGuruState createState() => _LoginGuruState();
+  _LoginSiswaState createState() => _LoginSiswaState();
 }
 
-class _LoginGuruState extends State<LoginGuru> with Validation {
+class _LoginSiswaState extends State<LoginSiswa> with Validation {
   Color _bg = Color(0xff1d3557);
   Color _sec = Color(0xff457b9d);
   Color _tr = Color(0xfff1faee);
 
   final _emailController = TextEditingController();
   final _passController = TextEditingController();
-
+  final _scaffoldKey = GlobalKey<ScaffoldState>();
   // clearField() {
   //   _emailController.clear();
   //   _passController.clear();
@@ -24,10 +24,11 @@ class _LoginGuruState extends State<LoginGuru> with Validation {
 
   String _email;
   String _pass;
-  final email = "guru1@gmail.com";
+
+  final email = "siswa1@gmail.com";
   final pass = "12345678";
+
   final _formKey = GlobalKey<FormState>();
-  final _scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
@@ -48,6 +49,7 @@ class _LoginGuruState extends State<LoginGuru> with Validation {
   @override
   Widget build(BuildContext context) {
     Size screen = MediaQuery.of(context).size;
+
     return Scaffold(
         key: _scaffoldKey,
         body: GestureDetector(
@@ -75,7 +77,7 @@ class _LoginGuruState extends State<LoginGuru> with Validation {
                       height: screen.height * 0.25,
                       child: Center(
                         child: Text(
-                          "Login Guru",
+                          "Login Siswa",
                           textAlign: TextAlign.center,
                           style:
                               GoogleFonts.redressed(fontSize: 35, color: _tr),
@@ -170,6 +172,7 @@ class _LoginGuruState extends State<LoginGuru> with Validation {
                                 onTap: () {
                                   if (_formKey.currentState.validate()) {
                                     //_formKey.currentState.reset();
+
                                     if (_emailController.text == email &&
                                         _passController.text == pass) {
                                       clearField();
@@ -177,7 +180,7 @@ class _LoginGuruState extends State<LoginGuru> with Validation {
                                       Navigator.push(
                                           context,
                                           PageTransition(
-                                              child: GuruPage(),
+                                              child: SiswaPage(),
                                               type: PageTransitionType.fade));
                                     } else {
                                       _scaffoldKey.currentState
