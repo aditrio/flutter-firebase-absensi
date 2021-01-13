@@ -1,41 +1,42 @@
 {
   "project_info": {
-    "project_number": "669937948315",
-    "project_id": "flutterbase-sbd",
-    "storage_bucket": "flutterbase-sbd.appspot.com"
+    "project_number": "568820735164",
+    "firebase_url": "https://belajar-sbd-default-rtdb.firebaseio.com",
+    "project_id": "belajar-sbd",
+    "storage_bucket": "belajar-sbd.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:669937948315:android:eedf69e381165e1080183e",
+        "mobilesdk_app_id": "1:568820735164:android:9f05e1df64b13b871b84b9",
         "android_client_info": {
-          "package_name": "com.example.eabsensi_firebase"
+          "package_name": "com.sbd.eabsensi_firebase"
         }
       },
       "oauth_client": [
         {
-          "client_id": "669937948315-50m5f3q945v20jjgmb97lsqearccoplt.apps.googleusercontent.com",
+          "client_id": "568820735164-a6mgkc5c2b2jbr29rhg4kr1jjeomqvcb.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.eabsensi_firebase",
+            "package_name": "com.sbd.eabsensi_firebase",
             "certificate_hash": "95542ef4709c547f5dbd3544568eb7c34e220995"
           }
         },
         {
-          "client_id": "669937948315-mrj6lp0pgurpaq7aunav8utihbfjd00h.apps.googleusercontent.com",
+          "client_id": "568820735164-haq2aoapnpuedssb983oqfpdj2goru6s.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCADWN8Cs8AExen7Mku9A0V724LP4epTq4"
+          "current_key": "AIzaSyDj4iAOOkXrtPbeMVeACfYkNow7IkgCrJY"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "669937948315-mrj6lp0pgurpaq7aunav8utihbfjd00h.apps.googleusercontent.com",
+              "client_id": "568820735164-haq2aoapnpuedssb983oqfpdj2goru6s.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
